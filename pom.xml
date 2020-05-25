@@ -50,7 +50,6 @@
 			</exclusions>
 		</dependency>
 
-
 		<!--MyBatisPlus依赖-->
 		<dependency>
 			<groupId>com.baomidou</groupId>
@@ -58,6 +57,19 @@
 			<version>3.3.1.tmp</version>
 		</dependency>
 
+<!--	MyBatis	Plus 自动生成所需依赖	-->
+		<!--	velocity(默认),Freemarker,Beetl	,三种生成方式	-->
+			<!--	配置启动类(生成策略)	-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>3.3.1.tmp</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
 
 
 	</dependencies>

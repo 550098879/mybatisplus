@@ -33,7 +33,7 @@ public class User {
 
     /**@TableField
      *   1.value:映射数据表字段
-     *   2.exist :默认是turu,表示该字段为数据库字段,false:表示不需要映射该字段
+     *   2.exist :默认是true,表示该字段为数据库字段,false:表示不需要映射该字段
      *   3.select: t/f 表示是否查询该字段
      *   4.fill 表示是否自动填充,将对象存入数据库的时候,由MyBatisPlus自动给某些字段赋值
      *      如创建时间,和更新时间
@@ -76,6 +76,9 @@ public class User {
      *      3.在需要映射的枚举变量上添加 @EnumValue 注解(数据类型需要相同)
      *      4.实体类添加该枚举类声明,且命名要与表字段相同/或者添加@TableField("status")
      *      5.在application.yml中配置扫描枚举类所在的包
+     *         mybatis-plus:
+     *           configuration:
+     *              log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
      *
      *      二丶实现接口
      *      1.创建枚举类,实现 IEnum<Integer> 接口
@@ -93,10 +96,18 @@ public class User {
 
     /***
      * @TableLogic
-     *
-     *
+     * 映射逻辑删除 (实质上执行的是更新操作)
+     *  1.数据表添加deleted字段
+     *  2.实体类添加注解
+     *  3.在application.yml中添加配置
+     *    mybatis-plus:
+     *      global-config:
+     *        db-config:
+     *           logic-not-delete-value: 0   #0表示存在
+     *           logic-delete-value: 1       #1表示删除
      */
-
+    //@TableLogic
+    private Integer deleted;
 
 
 }

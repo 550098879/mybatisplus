@@ -1,6 +1,7 @@
 package org.zyx.config;
 
 import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,6 +15,15 @@ public class MyBatisPlusConfig {
     @Bean
     public OptimisticLockerInterceptor optimisticLockerInterceptor(){
         return new OptimisticLockerInterceptor();
+    }
+
+    /**
+     * 分页工具bean
+     * @return
+     */
+    @Bean
+    public PaginationInterceptor paginationInterceptor(){
+        return new PaginationInterceptor();
     }
 
 }

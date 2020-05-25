@@ -1139,124 +1139,159 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="288" parent="8" name="classes"/>
-    <table id="289" parent="8" name="student"/>
-    <table id="290" parent="8" name="t_account"/>
-    <table id="291" parent="8" name="user"/>
-    <column id="292" parent="288" name="cid">
+    <table id="289" parent="8" name="product"/>
+    <table id="290" parent="8" name="student"/>
+    <table id="291" parent="8" name="t_account"/>
+    <table id="292" parent="8" name="user"/>
+    <column id="293" parent="288" name="cid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="288" name="cname">
+    <column id="294" parent="288" name="cname">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="294" parent="288" name="PRIMARY">
+    <key id="295" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>cid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="295" parent="289" name="sid">
+    <column id="296" parent="289" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="297" parent="289" name="count">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="298" parent="289" name="description">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="299" parent="289" name="user_id">
+      <Position>4</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="300" parent="289" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="301" parent="290" name="sid">
       <Position>1</Position>
       <DataType>bigint(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="289" name="sname">
+    <column id="302" parent="290" name="sname">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="289" name="cid">
+    <column id="303" parent="290" name="cid">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="298" parent="289" name="cid_foreign">
+    <index id="304" parent="290" name="cid_foreign">
       <ColNames>cid</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="299" parent="289" name="PRIMARY">
+    <key id="305" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="300" parent="289" name="cid_foreign">
+    <foreign-key id="306" parent="290" name="cid_foreign">
       <ColNames>cid</ColNames>
       <RefTableName>classes</RefTableName>
       <RefColNames>cid</RefColNames>
     </foreign-key>
-    <column id="301" parent="290" name="id">
+    <column id="307" parent="291" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="290" name="username">
+    <column id="308" parent="291" name="username">
       <Position>2</Position>
       <DataType>varchar(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="290" name="password">
+    <column id="309" parent="291" name="password">
       <Position>3</Position>
       <DataType>varchar(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="290" name="age">
+    <column id="310" parent="291" name="age">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="305" parent="290" name="PRIMARY">
+    <key id="311" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="306" parent="291" name="id">
+    <column id="312" parent="292" name="id">
       <Position>1</Position>
       <DataType>bigint(50)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="291" name="name">
+    <column id="313" parent="292" name="name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="291" name="age">
+    <column id="314" parent="292" name="age">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="291" name="create_time">
+    <column id="315" parent="292" name="create_time">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="291" name="update_time">
+    <column id="316" parent="292" name="update_time">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="291" name="version">
+    <column id="317" parent="292" name="version">
       <Position>6</Position>
       <DataType>bigint(20)|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="291" name="status">
+    <column id="318" parent="292" name="status">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="313" parent="291" name="PRIMARY">
+    <column id="319" parent="292" name="deleted">
+      <Position>8</Position>
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="320" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

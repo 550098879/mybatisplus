@@ -4,8 +4,15 @@ spring:
     password: 550098879
     url: jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
 #    打印数据库语句日志
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   type-enums-package: org.zyx.enums
+  global-config:
+    db-config:
+      logic-not-delete-value: 0   #0表示存在
+      logic-delete-value: 1       #1表示删除
